@@ -1,5 +1,5 @@
 <?php
-aksld;jkalsjd;kfajsdkfajds
+
 $username="root";
 $password="root";
 $database="testdb";

@@ -1,0 +1,86 @@
+//-------variables----------//
+
+$white: #FFFFFF;
+$highlight: #7ac483;
+$grey_background: #f2f1f8;
+$dark_grey: #3f3d4e;
+
+//--------global styles--------//
+
+body {
+	font-family: Helvetica, sans-serif
+}
+
+.wrapper {
+	width: 1250px;
+	max-width: 91%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.button {
+	border: none;
+	outline: none;
+	border-radius: 2rem;
+	padding: 0.6rem 3rem;
+	font-weight: 700;
+	color: $white;
+	text-decoration: none;
+	text-align: center;
+}
+
+.button_highlight {
+	background: $highlight;
+}
+
+.button_secondary {
+		background: rgba(250,250,250,0.35);
+}
+
+.button_small {
+	padding: 0.3rem 1.5rem;
+}
+
+//-------banner style-------//
+
+#banner {
+	background-image: url(http://robosavages.com/wp-content/uploads/2012/11/header-295-2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	header {
+		padding: 2rem 0;
+	}
+	#logo {
+		color: $white;
+		font-weight: 700;
+		font-size: 1.3rem;
+		float: left;
+	}
+	nav {
+		float: right;
+		a {
+			color: $white;
+			font-weight: 700;
+			text-decoration: none;
+			margin-left: 2rem;
+		}
+	}
+}
+
+#verification {
+	padding: 2rem 0 6rem 0;
+	text-align: center;
+	.body_header {
+		color: black;
+		text-align: center;
+		font-size: 2rem;
+		margin: 0;
+	}
+	.button_wrapper {
+		text-align: center;
+		margin: 1rem 0;
+		.button {
+			margin: 0 0.75rem;
+		}
+	}
+}
