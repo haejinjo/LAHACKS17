@@ -1,0 +1,230 @@
+//-------variables----------//
+
+$white: #FFFFFF;
+$highlight: #ff9788;
+$highlight2: #6b83c0;
+$grey_background: #f2f1f8;
+$dark_grey: #3f3d4e;
+
+//-------global style-------//
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Helvetica, sans-serif
+}
+
+.wrapper {
+	width: 1250px;
+	max-width: 91%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.button {
+	border: none;
+	outline: none;
+	padding: 0.6rem 3rem;
+	font-weight: 700;
+	color: $white;
+	text-decoration: none;
+	text-align: center;
+}
+
+.button_highlight {
+	background: $highlight;
+}
+
+.button_secondary {
+	background: $highlight2;
+}
+
+.button_small {
+	padding: 0.3rem 1.5rem;
+}
+
+footer {
+	width: 1250px;
+	text-align: center;
+	font-size: 0.75rem;
+	margin: 0 0 0 0;
+}
+
+//-------banner style-------//
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+#menu {
+	background-color: rgba(0,0,0,0.5);
+	height: 5%;
+	position: fixed;
+	margin-top: 0;
+	header {
+		padding: 0.5rem 0;
+		.img {
+			float: left;
+			padding: auto;
+		}
+	}
+	#logo {
+		color: $white;
+		font-weight: 700;
+		font-size: 1.3rem;
+		float: left;
+		margin: 0;
+	}
+	nav {
+		float: right;
+		a {
+			color: $white;
+			font-weight: 700;
+			text-decoration: none;
+			margin-left: 2rem;
+		}
+		#popup-container {
+			background-color: $white;
+			padding: 15px;
+			height: 250px;
+			text-align: center;
+			input {
+				width: 260px;
+				height: 2rem;
+				margin-bottom: 10px;
+				border: 1px solid silver;
+				padding: 10px;
+			}
+			a {
+				color: black;
+				font-size: 0.75rem;
+				float: center;
+				margin: 0 auto;
+			}
+		}
+		#popup-wrapper {
+			width: 300px;
+			margin: 70px auto;
+			text-align: left;
+		}
+		.popup-position {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: rgba(0,0,0,0.6);
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+#banner {
+	height: 100%;
+	background-image: url(MainPage.jpg);
+	background-size: 100px 100px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.content {
+		padding: 2rem 0 6rem 0;
+		.title {
+			color: $white;
+			text-align: center;
+			font-size: 3.5rem;
+			margin-top: 8rem;
+		}
+		.button_wrapper {
+			text-align: center;
+			margin: 3rem 0;
+			.button {
+				margin: 0 0.75rem;
+			}
+		}
+	}
+}
+
+//-----------about style-----------//
+#about {
+	background-image: url(LogoBW.jpg);
+	padding: 2rem 0 6.5rem 0;
+	.body_header {
+		color: $white;
+		text-align: center;
+		font-size: 3rem;
+		margin-bottom: 5rem;
+	}
+	.about {
+		background: $white;
+		width: 35%;
+		float: left;
+		margin: 0 5rem 0 5rem;
+		padding: 3rem 2.5%;
+		text-align: center;
+		border-radius: 0.5rem;
+		h3 {
+			margin: 0;
+			font-size: 1.5rem;
+			color: $dark_grey;
+		}
+		p {
+			margin: 0 0 2rem 0;
+			color: $dark_grey;
+		}
+		.button {
+			padding: 0.5rem 2rem;
+		}
+	}
+}
+
+//-----------values style-----------//
+#values {
+	background-image: url(LAmap.jpg);
+	padding: 2rem 0 5rem 0;
+	text-align: center;
+	overflow: hidden;
+	.body_header {
+		font-size: 2.5rem;
+		margin: 0 0 0.75rem 0;
+	}
+	.value {
+		padding: 0.1rem 15rem 0.1rem;
+		font-weight: 400;
+	}
+	.button_wrapper {
+		padding: 1rem;
+		margin-top: 1.5rem;
+	}
+}	
+
+//-----------registration style-----------//
+#registration {
+	background-image: url(skyline.jpg);
+	height: 95%;
+	text-align: center;
+	padding: 2rem;
+	.body_header {
+		color: $white;
+		font-size: 3.5rem;
+	}
+	.form {
+		width: 400px;
+		overflow: hidden;
+		margin: auto;
+		input {
+			width: 400px;
+			height: 2rem;
+			margin-bottom: 10px;
+			border: 1px $dark_grey;
+			padding: 10px;
+		}
+		.button_wrapper {
+			padding: 0.5rem 2rem;
+			margin: 1rem 0 2rem 0;
+		}
+	}
+}
