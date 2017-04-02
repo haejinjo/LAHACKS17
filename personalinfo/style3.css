@@ -13,7 +13,6 @@ body {
 .button {
   border: none;
   outline: none;
-  border-radius: 2rem;
   padding: 0.6rem 3rem;
   font-weight: 700;
   color: #FFFFFF;
@@ -21,10 +20,10 @@ body {
   text-align: center; }
 
 .button_highlight {
-  background: #306036; }
+  background: #ff9788; }
 
 .button_secondary {
-  background: #bdc1c1; }
+  background: #6b83c0; }
 
 .button_small {
   padding: 0.3rem 1.5rem; }
@@ -39,6 +38,9 @@ html {
   height: 100%; }
 
 body {
+  background-image: url(Venice.jpg);
+  background-repeat: none;
+  background-position: center;
   height: 100%; }
 
 #menu {
@@ -63,44 +65,53 @@ body {
       margin-left: 2rem; }
 
 #registration {
-  background: #3f3d4e;
   height: 100%;
   text-align: center;
   padding: 2rem; }
   #registration .body_header {
     color: #FFFFFF;
-    font-size: 3.5rem; }
+    margin: 2rem 20% 3rem 20%;
+    font-size: 3.5rem;
+    width: 680px;
+    border: 2px solid #ff9788; }
   #registration .form {
     width: 400px;
     overflow: hidden;
-    margin: auto; }
+    margin: auto;
+    color: #FFFFFF; }
     #registration .form input {
       width: 400px;
       height: 2rem;
-      border-radius: 10px;
       margin-bottom: 10px;
       border: 1px solid silver;
       padding: 10px; }
+    #registration .form .p {
+      color: #FFFFFF; }
     #registration .form .button_wrapper {
       padding: 0.5rem 2rem;
       margin: 1rem 0 2rem 0; }
 
 #listing {
-  background: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.4);
   height: 95%;
   text-align: center;
-  padding: 2rem; }
+  padding: 2rem;
+  margin-left: 4%;
+  margin-right: 4%; }
   #listing .body_header {
-    color: black;
-    font-size: 3.5rem; }
+    color: #FFFFFF;
+    margin: 2rem 20% 3rem 20%;
+    font-size: 3.5rem;
+    width: 600px;
+    border: 2px solid #ff9788; }
   #listing .form {
+    color: #FFFFFF;
     width: 400px;
     overflow: hidden;
     margin: auto; }
     #listing .form input {
       width: 400px;
       height: 2rem;
-      border-radius: 10px;
       margin-bottom: 10px;
       border: 1px solid silver;
       padding: 10px; }

@@ -1,8 +1,8 @@
 //-------variables----------//
 
 $white: #FFFFFF;
-$highlight: #306036;
-$highlight2: #bdc1c1;
+$highlight: #ff9788;
+$highlight2: #6b83c0;
 $grey_background: #f2f1f8;
 $dark_grey: #3f3d4e;
 
@@ -25,7 +25,6 @@ body {
 .button {
 	border: none;
 	outline: none;
-	border-radius: 2rem;
 	padding: 0.6rem 3rem;
 	font-weight: 700;
 	color: $white;
@@ -59,6 +58,9 @@ html {
 }
 
 body {
+	background-image: url(Venice.jpg);
+	background-repeat: none;
+	background-position: center;
 	height: 100%;
 }
 
@@ -89,25 +91,30 @@ body {
 }
 //-----------registration style-----------//
 #registration {
-	background: $dark_grey;
 	height: 100%;
 	text-align: center;
 	padding: 2rem;
 	.body_header {
 		color: $white;
+		margin: 2rem 20% 3rem 20%;
 		font-size: 3.5rem;
+		width: 680px;
+		border: 2px solid $highlight;
 	}
 	.form {
 		width: 400px;
 		overflow: hidden;
 		margin: auto;
+		color: $white;
 		input {
 			width: 400px;
 			height: 2rem;
-			border-radius: 10px;
 			margin-bottom: 10px;
 			border: 1px solid silver;
 			padding: 10px;
+		}
+		.p {
+			color: $white;
 		}
 		.button_wrapper {
 			padding: 0.5rem 2rem;
@@ -117,22 +124,27 @@ body {
 }
 
 #listing {
-	background: $white;
+	background-color: rgba(0,0,0,0.4);
 	height: 95%;
 	text-align: center;
 	padding: 2rem;
+	margin-left: 4%;
+	margin-right: 4%;
 	.body_header {
-		color: black;
+		color: $white;
+		margin: 2rem 20% 3rem 20%;
 		font-size: 3.5rem;
+		width: 600px;
+		border: 2px solid $highlight;
 	}
 	.form {
+		color: $white;
 		width: 400px;
 		overflow: hidden;
 		margin: auto;
 		input {
 			width: 400px;
 			height: 2rem;
-			border-radius: 10px;
 			margin-bottom: 10px;
 			border: 1px solid silver;
 			padding: 10px;
