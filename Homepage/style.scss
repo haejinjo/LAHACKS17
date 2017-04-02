@@ -11,7 +11,8 @@ $dark_grey: #3f3d4e;
 	box-sizing: border-box;
 }
 
-body {
+body, html {
+	margin: 0;
 	font-family: Helvetica, sans-serif
 }
 
@@ -34,10 +35,12 @@ body {
 
 .button_highlight {
 	background: $highlight;
+	transition: all 700ms ease;
 }
 
 .button_secondary {
 	background: $highlight2;
+	transition: all 700ms ease;
 }
 
 .button_small {
@@ -63,7 +66,8 @@ body {
 
 #menu {
 	background-color: rgba(0,0,0,0.5);
-	height: 5%;
+	height: 50px;
+	width: 100%;
 	position: fixed;
 	margin-top: 0;
 	header {
@@ -82,11 +86,32 @@ body {
 	}
 	nav {
 		float: right;
-		a {
+		height: 50px;
+		.nav-item {
 			color: $white;
 			font-weight: 700;
+			height: 50px;
 			text-decoration: none;
 			margin-left: 2rem;
+			display: inline-block;
+			margin: 0;
+			padding: 15px 20px;
+			line-height: 5px;
+			text-decoration: none;
+			transition: background-color 500ms ease;
+		}
+		.nav-item2 {
+			color: $white;
+			font-weight: 700;
+			height: 50px;
+			text-decoration: none;
+			margin-left: 2rem;
+			display: inline-block;
+			margin: 0;
+			padding: 15px 20px;
+			line-height: 5px;
+			text-decoration: none;
+			transition: background-color 500ms ease;
 		}
 		#popup-container {
 			background-color: $white;
@@ -121,6 +146,12 @@ body {
 			width: 100%;
 			height: 100%;
 		}
+		.nav-item:hover {
+			background-color: $highlight;
+		}
+		.nav-item2:hover {
+			background-color: $highlight2;
+		}
 	}
 }
 
@@ -144,6 +175,14 @@ body {
 			.button {
 				margin: 0 0.75rem;
 			}
+		}
+		.button_highlight:hover {
+			background: $white;	
+			color: $highlight;
+		}
+		.button_secondary:hover {
+			background: $white;	
+			color: $highlight2;
 		}
 	}
 }
@@ -178,6 +217,10 @@ body {
 		.button {
 			padding: 0.5rem 2rem;
 		}
+		.button_highlight:hover {
+			background: $white;	
+			color: $highlight;
+		}
 	}
 }
 
@@ -198,6 +241,10 @@ body {
 	.button_wrapper {
 		padding: 1rem;
 		margin-top: 1.5rem;
+	}
+	.button_highlight:hover {
+		background: $white;	
+		color: $highlight;
 	}
 }	
 
@@ -225,6 +272,10 @@ body {
 		.button_wrapper {
 			padding: 0.5rem 2rem;
 			margin: 1rem 0 2rem 0;
+		}
+		.button_highlight:hover {
+			background: $white;	
+			color: $highlight;
 		}
 	}
 }
