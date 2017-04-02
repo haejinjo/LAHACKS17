@@ -1,7 +1,8 @@
 * {
   box-sizing: border-box; }
 
-body {
+body, html {
+  margin: 0;
   font-family: Helvetica, sans-serif; }
 
 .wrapper {
@@ -20,7 +21,8 @@ body {
   text-align: center; }
 
 .button_highlight {
-  background: #ff9788; }
+  background: #ff9788;
+  transition: all 700ms ease; }
 
 .button_secondary {
   background: #6b83c0; }
@@ -45,7 +47,8 @@ body {
 
 #menu {
   background-color: rgba(0, 0, 0, 0.5);
-  height: 5%;
+  height: 50px;
+  width: 100%;
   position: fixed;
   margin-top: 0; }
   #menu header {
@@ -57,17 +60,41 @@ body {
     float: left;
     margin: 0; }
   #menu nav {
-    float: right; }
-    #menu nav a {
+    float: right;
+    height: 50px; }
+    #menu nav .nav-item {
       color: #FFFFFF;
       font-weight: 700;
+      height: 50px;
       text-decoration: none;
-      margin-left: 2rem; }
+      margin-left: 2rem;
+      display: inline-block;
+      margin: 0;
+      padding: 15px 20px;
+      line-height: 5px;
+      text-decoration: none;
+      transition: background-color 500ms ease; }
+    #menu nav .nav-item2 {
+      color: #FFFFFF;
+      font-weight: 700;
+      height: 50px;
+      text-decoration: none;
+      margin-left: 2rem;
+      display: inline-block;
+      margin: 0;
+      padding: 15px 20px;
+      line-height: 5px;
+      text-decoration: none;
+      transition: background-color 500ms ease; }
+    #menu nav .nav-item:hover {
+      background-color: #ff9788; }
+    #menu nav .nav-item2:hover {
+      background-color: #6b83c0; }
 
 #registration {
   height: 100%;
   text-align: center;
-  padding: 2rem; }
+  padding: 3rem; }
   #registration .body_header {
     color: #FFFFFF;
     margin: 2rem 20% 3rem 20%;
@@ -90,6 +117,9 @@ body {
     #registration .form .button_wrapper {
       padding: 0.5rem 2rem;
       margin: 1rem 0 2rem 0; }
+    #registration .form .button_highlight:hover {
+      background: #FFFFFF;
+      color: #ff9788; }
 
 #listing {
   background-color: rgba(0, 0, 0, 0.4);
@@ -118,5 +148,8 @@ body {
     #listing .form .button_wrapper {
       padding: 0.5rem 2rem;
       margin: 1rem 0 2rem 0; }
+    #listing .form .button_highlight:hover {
+      background: #FFFFFF;
+      color: #ff9788; }
 
 /*# sourceMappingURL=style3.css.map */
