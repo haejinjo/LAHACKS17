@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geocoding service</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 500px;
+        width: auto;
+        padding-top: 50px;
+        padding-bottom:0px;
+        margin-top: 50px;
+        margin-bottom: 0px;
+        margin-left: 25px;
+        margin-right: 25px;
+        background-color: black;
+        color: black;
+        font-size: 16px;
+        font-family: Helvetica;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        font-family: Helvetica;
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-size: 25px;
+      }
+      #submit{
+        font-size: 20px;
+        font-family: Helvetica;
+        background-color: grey; 
+        color: white;
+        border-radius: 12px;
+      }
+      #submit:active{
+        transform: translateY(4px)
+      }
+      #address {
+        font-size: 20px;
+        font-family: Helvetica;
+      }
+      #floating-panel {
+        position: top;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        
+        text-align: center;
+        font-family: Helvetica;
+        line-height: 30px;
+        padding-left: 10px;
+        background-color: black;
+
+      }
+
+      }
+    </style>
+  </head>
+  <body>
+    <div id="Body above">
+    <h1 id = "header.1">What venue are you going to?<h1>
+    <div/>
+    <div id="floating-panel"> 
+      <input id="address" type="textbox" value="">
+      <input id="submit" type="button" value="Search Venue">
+    </div>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: {lat: 39.8282, lng: -98.5795}
+        });
+        var geocoder = new google.maps.Geocoder();
+
+        document.getElementById('submit').addEventListener('click', function() {
+          geocodeAddress(geocoder, map);
+        });
+      
+        }
+      
+
+      function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            resultsMap.setCenter(results[0].geometry.location);
+            resultsMap.setZoom(13);
+            let circle = new google.maps.Circle({
+              map: resultsMap,
+              radius: 3218.69,
+              center: results[0].geometry.location,
+              fillColor: "blue",
+              strokeWeight: 0,
+              fillOpacity: .2
+            });
+            let marker = new google.maps.Marker({
+              map: resultsMap,
+              position: results[0].geometry.location
+            });
+            let infowindow = new google.maps.InfoWindow({
+              content: document.getElementById('address').value
+            });
+            marker.addListener('click', function() {
+              infowindow.open(resultsMap, marker);
+            });
+
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
+
+      
+        
+      
+
+      
+     
+
+
+
+      //This is new stuff. probably doesn't work
+      //for(let i = 0, i < number.of.users - 1, i++)
+      //{
+      // if (parkingspot.sell === yes){ 
+      //    if (computeDistanceBetween(results[0].geometry.location, parkingspot.location) < 3218.69) 
+      //    {
+      //      let marker = new google.maps.Marker({
+      //      map: resultsMap,
+      //      position: parkingspot.location
+      //      title: parkingspot.address
+      //     });
+      //  }
+//let contentString = '<div id="content">'+
+//            '<div id="siteNotice">'+
+//            '</div>'+
+//            '<h1 id="firstHeading" class="firstHeading">parkingspot.address</h1>'+
+//            '<div id="bodyContent">'+
+//            '<p>Owner: parking.spot.name'
+//                'Ammount: parkingspot.ammount'
+//                'distance: computeDistanceBetween(results[0].geometry.location, parkingspot.location)'
+//                'link to popup to buy'
+//            '</p>'+
+//            '</div>'+
+//            '</div>'
+
+
+
+
+
+
+      //    let infowindow = new google.maps.InfoWindow({
+      //      content: contentString
+      //  });
+      //    marker.addListener('click', function() {
+      //      infowindow.open(map, marker);
+      //  });
+      //  }
+      //}
+    
+    </script>
+    <script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASjA8QbbQM8XdBwXMB-DQ4ouqtJ2SPi2E&callback=initMap">
+    </script>
+    
+  </body>
+</html>
